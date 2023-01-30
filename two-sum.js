@@ -11,7 +11,21 @@ var twoSum = function (nums, target) {
     }
 }
 
-// Commented code, explanation, and alternate code below.
+// Alternate code, commented code, and explanation below.
+
+/*
+     //ALTERNATE CODE
+//Code to add every combination pair in a list to test if their sum equals target number. If true, break the loop and return the combination pair that past the test.
+
+
+// var twoSum = function (nums, target) {
+//     for (let i = 0; i < nums.length; i++) {
+//         for (let j = i + 1; j < nums.length; j++) {
+//             if (nums[i] + nums[j] === target) return [i, j];
+//         }
+//     }
+// };
+*/
 
 /*
 //COMMENTED CODE(delete block comments to view).
@@ -56,25 +70,3 @@ var twoSum = function (nums, target) {
     //second loop: check if target-minus nums[1] is equal to ANY number in obj; nums = [a,b,c,d,e]  obj = {a,1}
     //third loop: check if target-minus nums[2] is equal to ANY number in obj; nums = [a,b,c,d,e]  obj = {a:1,b:2}
     //and so on until every combination pair is checked or an answer is found.
-
-///////////////////////////////
-
-/*
-
-     //ALTERNATE CODE
-//Code to add every combination pair in a list to test if their sum equals target number. If true, break the loop and return the combination pair that past the test.
-
-
-var twoSum = function (nums, target) {
-    for (let i = 0; i < nums.length; i++) {
-        for (let j = i + 1; j < nums.length; j++) {
-            if (nums[i] + nums[j] === target) {
-                var number = [i, j];
-                break;
-            }
-        }
-    }
-    return number
-};
-
-*/
