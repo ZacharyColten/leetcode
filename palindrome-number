@@ -1,0 +1,19 @@
+/**
+ * @param {number} x
+ * @return {boolean}
+ */
+var isPalindrome = function (x) {
+    return x.toString().split('').reverse().join('') == x;
+};
+
+// Commented Code below
+
+var isPalindrome = function (x) {
+    //-Use the toString() method to convert the number to a string
+    //-Use the split('') method to return a new array with every charactor of the string as its own element.
+    //-Use the reverse() method to reverse the new created array
+    //-Use the join() method to join all elements of the array into a string
+
+    //This statement returns true or false using a equality comparison operator comparing resulting string and original  number x.
+    return x.toString().split('').reverse().join('') == x;
+};
