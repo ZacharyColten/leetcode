@@ -14,6 +14,17 @@ var isPalindrome = function (x) {
     //-Use the reverse() method to reverse the new created array
     //-Use the join() method to join all elements of the array into a string
 
-    //This statement returns true or false using a equality comparison operator comparing resulting string and original  number x.
+//   x   toStr    a     split      b      reverse      c       join      d = x.toString().split('').reverse().join('')
+//  125    ->   "125"     ->    [1,2,5]      ->     [5,2,1]     ->     "521" 
+
+//     a = x.toString()
+
+//    b = a.split('')
+
+//    c = b.reverse()
+
+//    d = c.join('')
+
+    //This statement returns true or false using equality comparison operator comparing resulting string and original  number x.
     return x.toString().split('').reverse().join('') == x;
 };
