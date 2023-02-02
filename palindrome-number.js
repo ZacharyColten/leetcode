@@ -33,16 +33,18 @@ var isPalindrome = function (x) {
 
 */
 
-// Follow up: do it without converting to string: explanation found at URL: https://leetcode.com/problems/palindrome-number/solutions/2658882/solving-it-without-using-string-in-javascript/?q=javascript&orderBy=most_votes
-
+// Follow up: do it without converting to string: LeetCode user explanation found at URL: https://leetcode.com/problems/palindrome-number/solutions/2658882/solving-it-without-using-string-in-javascript/?q=javascript&orderBy=most_votes
+// (solution and comments modified for improved readability)
 /*
 
 var isPalindrome = function (x) {
     if (x < 0) return false;
     let num = x;
     let reverse = 0;
+    let lastNumber = 0;
     while (x > 0) {
-        reverse = reverse * 10 + (x % 10)
+        lastNumber = x % 10;       
+        reverse = (reverse * 10) + lastNumber;
         x = Math.floor(x / 10)
     }
     return reverse === num;
@@ -81,16 +83,18 @@ if(x < 0) return false;
 // our variables
 let num = x;
 let reverse = 0;
-
+let lastNumber = 0;
 // we use a while . we keep going untill we get x = 0
 while( x > 0) {
-    // multiply reverse by 10 and add the reminder
-    reverse = reverse * 10 + ( x % 10 )
+	// get the new last digit from x since the old one got removed from the last loop iteration, or if its the first iteration, it grabs the initial last digit.
+    lastNumber = x % 10;
+    	// add lastNumber to the current value of (reverse * 10) to get the new reverse value with the previous value of lastNumber preceeding 
+	// the current value of lastNumber on the far right end of the number x. 
+    reverse = (reverse * 10) + lastNumber;
 	
-    // devide x by 10 and remove decimal point. if x === 0 then it exists the loop
+    	//shaving off the last digit of the number x
     x = Math.floor(x / 10)
 }
-
 // now we are out of the while loop and we have the reverse number
 // lastly we compare the original number with the reverse. we use return and compare these two numbers
 // this will return True ( if they are equal ) or false( if they are not )
