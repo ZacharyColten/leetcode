@@ -28,7 +28,7 @@ var isPalindrome = function (x) {
 var isPalindrome = function (x) {
     //This statement returns true or false using an equality comparison operator comparing resulting string and original number.
     //Because we are comparing a number type data with a string type data for equality, we are unable to use the strict equality operator.
-    return x.toString().split('').reverse().join('') == x;
+    return x.toString().split('').reverse().join('') == x;  // or `${x}`.split('').reverse().join('') == x;
 };
 
 */
