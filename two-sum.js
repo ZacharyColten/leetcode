@@ -15,8 +15,8 @@ var twoSum = function (nums, target) {
 
 /*
      //ALTERNATE CODE
-//Code to add every combination pair in a list to test if their sum equals target number. If true, break the loop and return the combination pair that past the test.
-
+     
+//Code to add every combination pair in a list using basic looping capabilities and  to test if their sum equals target number. If true, break the loop and return the combination pair that past the test.
 
 var twoSum = function (nums, target) {
     for (let i = 0; i < nums.length; i++) {
