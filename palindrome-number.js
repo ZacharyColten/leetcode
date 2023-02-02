@@ -41,10 +41,10 @@ var isPalindrome = function (x) {
     if (x < 0) return false;
     let num = x;
     let reverse = 0;
-    let lastNumber = 0;
+    let lastDigit = 0;
     while (x > 0) {
-        lastNumber = x % 10;       
-        reverse = (reverse * 10) + lastNumber;
+        lastDigit = x % 10;       
+        reverse = (reverse * 10) + lastDigit;
         x = Math.floor(x / 10)
     }
     return reverse === num;
@@ -83,14 +83,14 @@ if(x < 0) return false;
 // our variables
 let num = x;
 let reverse = 0;
-let lastNumber = 0;
+let lastDigit = 0;
 // we use a while . we keep going untill we get x = 0
 while( x > 0) {
 	// get the new last digit from x since the old one got removed from the last loop iteration, or if its the first iteration, it grabs the initial last digit.
-    lastNumber = x % 10;
-    	// add lastNumber to the current value of (reverse * 10) to get the new reverse value with the previous value of lastNumber preceeding 
-	// the current value of lastNumber on the far right end of the number x. 
-    reverse = (reverse * 10) + lastNumber;
+    lastDigit = x % 10;
+    	// add lastDigit to the current value of (reverse * 10) to get the new reverse value with the previous iterations lastDigit value preceeding 
+	// the current iterations lastDigit value on the far right end of the number x. 
+    reverse = (reverse * 10) + lastDigit;
 	
     	//shaving off the last digit of the number x
     x = Math.floor(x / 10)
